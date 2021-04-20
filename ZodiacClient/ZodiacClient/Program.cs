@@ -10,6 +10,37 @@ namespace ZodiacClient
 {
     class Program
     {
+        static async Task Main(string[] args)
+        {
+            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var client = new Horoscope.HoroscopeClient(channel);
+
+            var cancellationToken = new CancellationTokenSource(Timeout.Infinite);
+
+            while (!cancellationToken.IsCancellationRequested)
+            {
+                Console.Write("Date: ");
+
+                var date = Console.ReadLine();
+                if (date.Length != 10) { return; }
+                if (!ValidateDate(date)) { return; }
+
+                var response = await client.AddZodiacAsync(new AddZodiacRequest { Zodiac = zodiacToBeAdded });
+
+                switch (response.Status)
+                {
+                    case AddZodiacResponse.Types.Status.Success:
+                        Console.WriteLine($"Status: {response.Status}\nZodiacal Sign: {response.Sign}\n");
+                        break;
+                    case AddZodiacResponse.Types.Status.Error:
+                        Console.WriteLine($"Status: {response.Status}\nInvalid Date!\n");
+                        break;
+                    default:
+                        Console.WriteLine($"Status: {response.Status}\nSomething Wrong!\n");
+                        break;
+                }
+            }
+        }
         public static bool ValidateDate(string date)
         {
 
