@@ -14,8 +14,6 @@ namespace ZodiacService {
 
     static readonly grpc::Marshaller<global::ZodiacService.AddZodiacRequest> __Marshaller_zodiac_AddZodiacRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ZodiacService.AddZodiacRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::ZodiacService.AddZodiacResponse> __Marshaller_zodiac_AddZodiacResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ZodiacService.AddZodiacResponse.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Google.Protobuf.WellKnownTypes.Empty.Parser.ParseFrom);
-    static readonly grpc::Marshaller<global::ZodiacService.GetAllZodiacsResponse> __Marshaller_zodiac_GetAllZodiacsResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::ZodiacService.GetAllZodiacsResponse.Parser.ParseFrom);
 
     static readonly grpc::Method<global::ZodiacService.AddZodiacRequest, global::ZodiacService.AddZodiacResponse> __Method_AddZodiac = new grpc::Method<global::ZodiacService.AddZodiacRequest, global::ZodiacService.AddZodiacResponse>(
         grpc::MethodType.Unary,
@@ -23,13 +21,6 @@ namespace ZodiacService {
         "AddZodiac",
         __Marshaller_zodiac_AddZodiacRequest,
         __Marshaller_zodiac_AddZodiacResponse);
-
-    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::ZodiacService.GetAllZodiacsResponse> __Method_GetAllZodiacs = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::ZodiacService.GetAllZodiacsResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetAllZodiacs",
-        __Marshaller_google_protobuf_Empty,
-        __Marshaller_zodiac_GetAllZodiacsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -46,11 +37,6 @@ namespace ZodiacService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::ZodiacService.GetAllZodiacsResponse> GetAllZodiacs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
     }
 
     /// <summary>Creates service definition that can be registered with a server</summary>
@@ -58,8 +44,7 @@ namespace ZodiacService {
     public static grpc::ServerServiceDefinition BindService(HoroscopeBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_AddZodiac, serviceImpl.AddZodiac)
-          .AddMethod(__Method_GetAllZodiacs, serviceImpl.GetAllZodiacs).Build();
+          .AddMethod(__Method_AddZodiac, serviceImpl.AddZodiac).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -69,7 +54,6 @@ namespace ZodiacService {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, HoroscopeBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_AddZodiac, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ZodiacService.AddZodiacRequest, global::ZodiacService.AddZodiacResponse>(serviceImpl.AddZodiac));
-      serviceBinder.AddMethod(__Method_GetAllZodiacs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::ZodiacService.GetAllZodiacsResponse>(serviceImpl.GetAllZodiacs));
     }
 
   }

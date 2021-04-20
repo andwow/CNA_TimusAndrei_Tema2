@@ -44,8 +44,6 @@ namespace ZodiacClient {
 
     static readonly grpc::Marshaller<global::ZodiacClient.AddZodiacRequest> __Marshaller_zodiac_AddZodiacRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ZodiacClient.AddZodiacRequest.Parser));
     static readonly grpc::Marshaller<global::ZodiacClient.AddZodiacResponse> __Marshaller_zodiac_AddZodiacResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ZodiacClient.AddZodiacResponse.Parser));
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
-    static readonly grpc::Marshaller<global::ZodiacClient.GetAllZodiacsResponse> __Marshaller_zodiac_GetAllZodiacsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::ZodiacClient.GetAllZodiacsResponse.Parser));
 
     static readonly grpc::Method<global::ZodiacClient.AddZodiacRequest, global::ZodiacClient.AddZodiacResponse> __Method_AddZodiac = new grpc::Method<global::ZodiacClient.AddZodiacRequest, global::ZodiacClient.AddZodiacResponse>(
         grpc::MethodType.Unary,
@@ -53,13 +51,6 @@ namespace ZodiacClient {
         "AddZodiac",
         __Marshaller_zodiac_AddZodiacRequest,
         __Marshaller_zodiac_AddZodiacResponse);
-
-    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::ZodiacClient.GetAllZodiacsResponse> __Method_GetAllZodiacs = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::ZodiacClient.GetAllZodiacsResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetAllZodiacs",
-        __Marshaller_google_protobuf_Empty,
-        __Marshaller_zodiac_GetAllZodiacsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -105,22 +96,6 @@ namespace ZodiacClient {
       public virtual grpc::AsyncUnaryCall<global::ZodiacClient.AddZodiacResponse> AddZodiacAsync(global::ZodiacClient.AddZodiacRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_AddZodiac, null, options, request);
-      }
-      public virtual global::ZodiacClient.GetAllZodiacsResponse GetAllZodiacs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetAllZodiacs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::ZodiacClient.GetAllZodiacsResponse GetAllZodiacs(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetAllZodiacs, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::ZodiacClient.GetAllZodiacsResponse> GetAllZodiacsAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetAllZodiacsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::ZodiacClient.GetAllZodiacsResponse> GetAllZodiacsAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetAllZodiacs, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override HoroscopeClient NewInstance(ClientBaseConfiguration configuration)

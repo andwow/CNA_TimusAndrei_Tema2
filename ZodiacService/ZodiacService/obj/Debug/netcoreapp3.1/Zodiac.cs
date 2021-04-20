@@ -31,11 +31,9 @@ namespace ZodiacService {
             "MiAuem9kaWFjLkFkZFpvZGlhY1Jlc3BvbnNlLlN0YXR1cxIMCgRzaWduGAIg",
             "ASgJIiAKBlN0YXR1cxILCgdTVUNDRVNTEAASCQoFRVJST1IQASI4ChVHZXRB",
             "bGxab2RpYWNzUmVzcG9uc2USHwoHem9kaWFjcxgBIAMoCzIOLnpvZGlhYy5a",
-            "b2RpYWMiFgoGWm9kaWFjEgwKBGRhdGUYASABKAkylQEKCUhvcm9zY29wZRJA",
-            "CglBZGRab2RpYWMSGC56b2RpYWMuQWRkWm9kaWFjUmVxdWVzdBoZLnpvZGlh",
-            "Yy5BZGRab2RpYWNSZXNwb25zZRJGCg1HZXRBbGxab2RpYWNzEhYuZ29vZ2xl",
-            "LnByb3RvYnVmLkVtcHR5Gh0uem9kaWFjLkdldEFsbFpvZGlhY3NSZXNwb25z",
-            "ZUIQqgINWm9kaWFjU2VydmljZWIGcHJvdG8z"));
+            "b2RpYWMiFgoGWm9kaWFjEgwKBGRhdGUYASABKAkyTQoJSG9yb3Njb3BlEkAK",
+            "CUFkZFpvZGlhYxIYLnpvZGlhYy5BZGRab2RpYWNSZXF1ZXN0Ghkuem9kaWFj",
+            "LkFkZFpvZGlhY1Jlc3BvbnNlQhCqAg1ab2RpYWNTZXJ2aWNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

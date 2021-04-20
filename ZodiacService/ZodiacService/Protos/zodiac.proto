@@ -9,7 +9,6 @@ package zodiac;
 
 service Horoscope{
 	rpc AddZodiac(AddZodiacRequest) returns (AddZodiacResponse);
-	rpc GetAllZodiacs(google.protobuf.Empty) returns (GetAllZodiacsResponse);
 }
 
 message AddZodiacRequest{
