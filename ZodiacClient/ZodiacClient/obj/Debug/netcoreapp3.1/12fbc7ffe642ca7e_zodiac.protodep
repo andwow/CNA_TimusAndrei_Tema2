@@ -1,1 +1,4 @@
-obj\Debug\netcoreapp3.1\Protos/Zodiac.cs: Protos/zodiac.proto
+obj\Debug\netcoreapp3.1\Protos/Zodiac.cs \
+obj\Debug\netcoreapp3.1\Protos/ZodiacGrpc.cs: C:/Users/Andrei/.nuget/packages/grpc.tools/2.37.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/Andrei/.nuget/packages/grpc.tools/2.37.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/zodiac.proto
