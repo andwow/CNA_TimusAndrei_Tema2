@@ -1,0 +1,4 @@
+obj\Release\netcoreapp3.1/Zodiac.cs \
+obj\Release\netcoreapp3.1/ZodiacGrpc.cs: C:/Users/Andrei/.nuget/packages/grpc.tools/2.27.0/build/native/include/google/protobuf/empty.proto\
+ C:/Users/Andrei/.nuget/packages/grpc.tools/2.27.0/build/native/include/google/protobuf/timestamp.proto\
+ Protos/zodiac.proto
