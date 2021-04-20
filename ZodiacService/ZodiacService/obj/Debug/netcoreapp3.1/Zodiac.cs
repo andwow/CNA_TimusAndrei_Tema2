@@ -29,17 +29,15 @@ namespace ZodiacService {
             "byIyChBBZGRab2RpYWNSZXF1ZXN0Eh4KBnpvZGlhYxgBIAEoCzIOLnpvZGlh",
             "Yy5ab2RpYWMidQoRQWRkWm9kaWFjUmVzcG9uc2USMAoGc3RhdHVzGAEgASgO",
             "MiAuem9kaWFjLkFkZFpvZGlhY1Jlc3BvbnNlLlN0YXR1cxIMCgRzaWduGAIg",
-            "ASgJIiAKBlN0YXR1cxILCgdTVUNDRVNTEAASCQoFRVJST1IQASI4ChVHZXRB",
-            "bGxab2RpYWNzUmVzcG9uc2USHwoHem9kaWFjcxgBIAMoCzIOLnpvZGlhYy5a",
-            "b2RpYWMiFgoGWm9kaWFjEgwKBGRhdGUYASABKAkyTQoJSG9yb3Njb3BlEkAK",
-            "CUFkZFpvZGlhYxIYLnpvZGlhYy5BZGRab2RpYWNSZXF1ZXN0Ghkuem9kaWFj",
-            "LkFkZFpvZGlhY1Jlc3BvbnNlQhCqAg1ab2RpYWNTZXJ2aWNlYgZwcm90bzM="));
+            "ASgJIiAKBlN0YXR1cxILCgdTVUNDRVNTEAASCQoFRVJST1IQASIWCgZab2Rp",
+            "YWMSDAoEZGF0ZRgBIAEoCTJNCglIb3Jvc2NvcGUSQAoJQWRkWm9kaWFjEhgu",
+            "em9kaWFjLkFkZFpvZGlhY1JlcXVlc3QaGS56b2RpYWMuQWRkWm9kaWFjUmVz",
+            "cG9uc2VCEKoCDVpvZGlhY1NlcnZpY2ViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacService.AddZodiacRequest), global::ZodiacService.AddZodiacRequest.Parser, new[]{ "Zodiac" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacService.AddZodiacResponse), global::ZodiacService.AddZodiacResponse.Parser, new[]{ "Status", "Sign" }, null, new[]{ typeof(global::ZodiacService.AddZodiacResponse.Types.Status) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacService.GetAllZodiacsResponse), global::ZodiacService.GetAllZodiacsResponse.Parser, new[]{ "Zodiacs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacService.Zodiac), global::ZodiacService.Zodiac.Parser, new[]{ "Date" }, null, null, null, null)
           }));
     }
@@ -351,127 +349,6 @@ namespace ZodiacService {
 
   }
 
-  public sealed partial class GetAllZodiacsResponse : pb::IMessage<GetAllZodiacsResponse> {
-    private static readonly pb::MessageParser<GetAllZodiacsResponse> _parser = new pb::MessageParser<GetAllZodiacsResponse>(() => new GetAllZodiacsResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetAllZodiacsResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::ZodiacService.ZodiacReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse(GetAllZodiacsResponse other) : this() {
-      zodiacs_ = other.zodiacs_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse Clone() {
-      return new GetAllZodiacsResponse(this);
-    }
-
-    /// <summary>Field number for the "zodiacs" field.</summary>
-    public const int ZodiacsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::ZodiacService.Zodiac> _repeated_zodiacs_codec
-        = pb::FieldCodec.ForMessage(10, global::ZodiacService.Zodiac.Parser);
-    private readonly pbc::RepeatedField<global::ZodiacService.Zodiac> zodiacs_ = new pbc::RepeatedField<global::ZodiacService.Zodiac>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::ZodiacService.Zodiac> Zodiacs {
-      get { return zodiacs_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetAllZodiacsResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetAllZodiacsResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!zodiacs_.Equals(other.zodiacs_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= zodiacs_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      zodiacs_.WriteTo(output, _repeated_zodiacs_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += zodiacs_.CalculateSize(_repeated_zodiacs_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetAllZodiacsResponse other) {
-      if (other == null) {
-        return;
-      }
-      zodiacs_.Add(other.zodiacs_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            zodiacs_.AddEntriesFrom(input, _repeated_zodiacs_codec);
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
   public sealed partial class Zodiac : pb::IMessage<Zodiac> {
     private static readonly pb::MessageParser<Zodiac> _parser = new pb::MessageParser<Zodiac>(() => new Zodiac());
     private pb::UnknownFieldSet _unknownFields;
@@ -480,7 +357,7 @@ namespace ZodiacService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ZodiacService.ZodiacReflection.Descriptor.MessageTypes[3]; }
+      get { return global::ZodiacService.ZodiacReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -29,17 +29,15 @@ namespace ZodiacClient {
             "byIyChBBZGRab2RpYWNSZXF1ZXN0Eh4KBnpvZGlhYxgBIAEoCzIOLnpvZGlh",
             "Yy5ab2RpYWMidQoRQWRkWm9kaWFjUmVzcG9uc2USMAoGc3RhdHVzGAEgASgO",
             "MiAuem9kaWFjLkFkZFpvZGlhY1Jlc3BvbnNlLlN0YXR1cxIMCgRzaWduGAIg",
-            "ASgJIiAKBlN0YXR1cxILCgdTVUNDRVNTEAASCQoFRVJST1IQASI4ChVHZXRB",
-            "bGxab2RpYWNzUmVzcG9uc2USHwoHem9kaWFjcxgBIAMoCzIOLnpvZGlhYy5a",
-            "b2RpYWMiFgoGWm9kaWFjEgwKBGRhdGUYASABKAkyTQoJSG9yb3Njb3BlEkAK",
-            "CUFkZFpvZGlhYxIYLnpvZGlhYy5BZGRab2RpYWNSZXF1ZXN0Ghkuem9kaWFj",
-            "LkFkZFpvZGlhY1Jlc3BvbnNlQg+qAgxab2RpYWNDbGllbnRiBnByb3RvMw=="));
+            "ASgJIiAKBlN0YXR1cxILCgdTVUNDRVNTEAASCQoFRVJST1IQASIWCgZab2Rp",
+            "YWMSDAoEZGF0ZRgBIAEoCTJNCglIb3Jvc2NvcGUSQAoJQWRkWm9kaWFjEhgu",
+            "em9kaWFjLkFkZFpvZGlhY1JlcXVlc3QaGS56b2RpYWMuQWRkWm9kaWFjUmVz",
+            "cG9uc2VCD6oCDFpvZGlhY0NsaWVudGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacClient.AddZodiacRequest), global::ZodiacClient.AddZodiacRequest.Parser, new[]{ "Zodiac" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacClient.AddZodiacResponse), global::ZodiacClient.AddZodiacResponse.Parser, new[]{ "Status", "Sign" }, null, new[]{ typeof(global::ZodiacClient.AddZodiacResponse.Types.Status) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacClient.GetAllZodiacsResponse), global::ZodiacClient.GetAllZodiacsResponse.Parser, new[]{ "Zodiacs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::ZodiacClient.Zodiac), global::ZodiacClient.Zodiac.Parser, new[]{ "Date" }, null, null, null, null)
           }));
     }
@@ -448,167 +446,6 @@ namespace ZodiacClient {
 
   }
 
-  public sealed partial class GetAllZodiacsResponse : pb::IMessage<GetAllZodiacsResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetAllZodiacsResponse> _parser = new pb::MessageParser<GetAllZodiacsResponse>(() => new GetAllZodiacsResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<GetAllZodiacsResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::ZodiacClient.ZodiacReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse(GetAllZodiacsResponse other) : this() {
-      zodiacs_ = other.zodiacs_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public GetAllZodiacsResponse Clone() {
-      return new GetAllZodiacsResponse(this);
-    }
-
-    /// <summary>Field number for the "zodiacs" field.</summary>
-    public const int ZodiacsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::ZodiacClient.Zodiac> _repeated_zodiacs_codec
-        = pb::FieldCodec.ForMessage(10, global::ZodiacClient.Zodiac.Parser);
-    private readonly pbc::RepeatedField<global::ZodiacClient.Zodiac> zodiacs_ = new pbc::RepeatedField<global::ZodiacClient.Zodiac>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public pbc::RepeatedField<global::ZodiacClient.Zodiac> Zodiacs {
-      get { return zodiacs_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as GetAllZodiacsResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(GetAllZodiacsResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if(!zodiacs_.Equals(other.zodiacs_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      hash ^= zodiacs_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      zodiacs_.WriteTo(output, _repeated_zodiacs_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      zodiacs_.WriteTo(ref output, _repeated_zodiacs_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      size += zodiacs_.CalculateSize(_repeated_zodiacs_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(GetAllZodiacsResponse other) {
-      if (other == null) {
-        return;
-      }
-      zodiacs_.Add(other.zodiacs_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            zodiacs_.AddEntriesFrom(input, _repeated_zodiacs_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            zodiacs_.AddEntriesFrom(ref input, _repeated_zodiacs_codec);
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
   public sealed partial class Zodiac : pb::IMessage<Zodiac>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -621,7 +458,7 @@ namespace ZodiacClient {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::ZodiacClient.ZodiacReflection.Descriptor.MessageTypes[3]; }
+      get { return global::ZodiacClient.ZodiacReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
