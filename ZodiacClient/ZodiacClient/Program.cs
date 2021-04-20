@@ -24,7 +24,8 @@ namespace ZodiacClient
                 var date = Console.ReadLine();
                 if (date.Length != 10) { return; }
                 if (!ValidateDate(date)) { return; }
-
+                var zodiacToBeAdded = new Zodiac()
+                { Date = date != null && date.Trim().Length > 0 ? date : "Invalid Date!" };
                 var response = await client.AddZodiacAsync(new AddZodiacRequest { Zodiac = zodiacToBeAdded });
 
                 switch (response.Status)
